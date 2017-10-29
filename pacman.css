@@ -1,0 +1,10 @@
+body {
+  background-color: blue;
+}
+
+.pacman {
+  position: fixed;
+  left: 100px;
+  top: 100px;
+  width: 30px;
+}

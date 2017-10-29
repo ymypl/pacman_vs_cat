@@ -1,6 +1,6 @@
 <svg version="1.1"
      baseProfile="full"
-     width="500" height="500"
+     viewBox="0 0 100 100"
      xmlns="http://www.w3.org/2000/svg">
 
   <path d="M 50 0
