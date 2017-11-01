@@ -14,6 +14,17 @@ class Pacman {
   down() {
     this.y += STEP;
     this.update();
+
+  }
+
+  left() {
+    this.x -= STEP;
+    this.update();
+  }
+
+  right() {
+    this.x += STEP;
+    this.update();
   }
 
   update() {
@@ -32,13 +43,18 @@ let schedule = (fn) => {
 }
 
 let handleKey = (e) => {
-  console.log(e);
   switch (e.key) {
     case 'ArrowDown':
       pacman.down();
       break;
     case 'ArrowUp':
       pacman.up();
+      break;
+    case 'ArrowLeft':
+      pacman.left();
+      break;
+    case 'ArrowRight':
+      pacman.right();
       break;
   }
 }
