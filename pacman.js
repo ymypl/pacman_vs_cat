@@ -1,17 +1,25 @@
 class Pacman {
 
   constructor(x, y) {
-    this.x = 100;
-    this.y = 100;
+    this.x = x;
+    this.y = y;
+    this.update();
   }
 
-  move() {
+  up() {
+    this.y -= STEP;
+    this.update();
+  }
+
+  down() {
+    this.y += STEP;
+    this.update();
+  }
+
+  update() {
     let $pacman = $('.pacman');
-    this.x += 10;
-    if (this.x > 500) {
-      this.x = 100;
-    }
     $pacman.css("left", this.x + "px");
+    $pacman.css("top", this.y + "px");
   }
 
 }
@@ -23,5 +31,20 @@ let schedule = (fn) => {
   }, 100);
 }
 
-let pacman = new Pacman();
-schedule(() => pacman.move());
+let handleKey = (e) => {
+  console.log(e);
+  switch (e.key) {
+    case 'ArrowDown':
+      pacman.down();
+      break;
+    case 'ArrowUp':
+      pacman.up();
+      break;
+  }
+}
+
+const STEP = 10;
+let pacman = new Pacman(100, 100);
+
+$(document).keydown(e => handleKey(e));
+
