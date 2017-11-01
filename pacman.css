@@ -7,4 +7,5 @@ body {
   left: 100px;
   top: 100px;
   width: 30px;
+  transition: top 100ms;
 }
