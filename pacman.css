@@ -1,11 +1,17 @@
 body {
-  background-color: blue;
+  background-color: black;
 }
 
 .pacman {
   position: fixed;
-  left: 100px;
-  top: 100px;
   width: 30px;
   transition: top 100ms;
+}
+
+.cat {
+	width: 100px;
+	height: 100px;
+	position: fixed;
+	background-image: url("img/cat.png");
+	background-size: contain;
 }
