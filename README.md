@@ -1,1 +1,1 @@
-# pacman_vs_cat to klikker.
+# pacman_vs_cat to cliker.

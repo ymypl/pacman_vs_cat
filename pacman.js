@@ -13,13 +13,11 @@ class Pacman {
   }
 
   left() {
-    this.x -= STEP;
-    this.update();
-  }
-
-  right() {
-    this.x += STEP;
-
+    if (this.x <= 100) {
+      this.x = 100;
+    } else {
+      this.x -= STEP;
+    }
     this.update();
   }
 
@@ -27,11 +25,6 @@ class Pacman {
     this.y += STEP;
     this.update();
 
-  }
-
-  left() {
-    this.x -= STEP;
-    this.update();
   }
 
   right() {
@@ -126,7 +119,7 @@ let handleKey = (e) => {
   }
 }
 
-const STEP = 10;
+const STEP = 20;
 let pacman = new Pacman(100, 100);
 let cat = new Cat(300, 100);
 
