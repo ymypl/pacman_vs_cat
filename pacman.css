@@ -15,3 +15,8 @@ body {
 	background-image: url("img/cat.png");
 	background-size: contain;
 }
+
+.wall {
+	position: absolute;
+	background-color: red;
+}
