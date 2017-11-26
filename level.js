@@ -1,6 +1,6 @@
-'use strict';
+// PLANSZA
 
-const RENDER_FACTOR = 35;
+'use strict';
 
 class Level {
 

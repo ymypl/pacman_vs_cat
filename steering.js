@@ -1,6 +1,6 @@
 'use strict';
 
-const STEP = 2;
+const STEP = 1;
 
 class Steering {
 
@@ -9,6 +9,7 @@ class Steering {
 		this.cat = cat;
 	}
 
+// STRZAŁKI PACMANA
 	handleKey(e) {
 	  switch (e.key) {
 	    case 'ArrowDown':
@@ -23,12 +24,9 @@ class Steering {
 	    case 'ArrowRight':
 	      this.pacman.right(STEP);
 	      break;
-	    case 'ArrowLeft':
-	      this.pacman.left(STEP);
-	      break;
-	    case 'ArrowRight':
-	      this.pacman.right(STEP);
-	      break;
+
+// STRZAŁKI KOTA
+
 	    case 'w':
 	      this.cat.up(STEP);
 	      break;

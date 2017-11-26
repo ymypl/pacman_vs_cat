@@ -4,15 +4,17 @@ body {
 }
 
 .pacman {
-    position: fixed;
+    position: absolute;
 	background-color: green;
 	z-index: 1;
+	transition: top 200ms, left 200ms;
 }
 
 .cat {
-	position: fixed;
+	position: absolute;
 	background-color: green;
 	z-index: 1;
+	transition: top 200ms, left 200ms;
 }
 
 .wall {
