@@ -4,8 +4,8 @@ const RENDER_FACTOR = 35;
 
 class Level {
 
-	createWalls() {
-	  let walls = [
+	constructor() {
+	  this.walls = [
 	    new Wall(0, 0, 21, 1),
 	    new Wall(0, 1, 1, 9),
 	    new Wall(1, 9, 1, 1),
@@ -63,14 +63,11 @@ class Level {
 	    new Wall(12,18,3,1),
 	    new Wall(16,18,1,2)
 	  ];
-
-	  return walls;
 	}
 
 	render() {
-	  let walls = this.createWalls();
-	  for (let i = 0; i < walls.length; i++) {
-	    let wall = walls[i];
+	  for (let i = 0; i < this.walls.length; i++) {
+	    let wall = this.walls[i];
 	    let $wall = $('<div class="wall"></div>');
 	    $wall.css({
 	      top: wall.top * RENDER_FACTOR + 'px',

@@ -2,10 +2,12 @@
 
 class Cat {
   
-  constructor(x, y) {
+  constructor(x, y, collisionDetector) {
     this.x = x;
     this.y = y;
     this.size = 30;
+
+    this.collisionDetector = collisionDetector;
 
     this.update();
   }
@@ -32,11 +34,16 @@ class Cat {
 
   update() {
     let $cat = $('.cat');
+    let background = 'green';
+    if (this.collisionDetector.isCollision(this.x, this.y, this.width)) {
+      background = 'red';
+    }
     $cat.css({
       "left": this.x + "px",
       "top": this.y + "px",
       "width": this.size + "px",
-      "height": this.size + "px"
+      "height": this.size + "px",
+      "background-color": background
     });
   }
 
