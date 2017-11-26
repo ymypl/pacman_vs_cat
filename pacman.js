@@ -16,11 +16,7 @@ class Pacman {
   }
 
   left(step) {
-    if (this.x <= 100) {
-      this.x = 100;
-    } else {
-      this.x -= step;
-    }
+    this.x -= step;
     this.update();
   }
 

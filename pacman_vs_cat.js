@@ -7,8 +7,8 @@ let schedule = (fn) => {
   }, 100);
 }
 
-let pacman = new Pacman(100, 100);
-let cat = new Cat(300, 100);
+let pacman = new Pacman(354, 668);
+let cat = new Cat(354, 352);
 let level = new Level();
 let steering = new Steering(pacman, cat);
 
