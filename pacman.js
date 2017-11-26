@@ -5,39 +5,43 @@ class Pacman {
   constructor(x, y) {
     this.x = x;
     this.y = y;
+    this.size = 30;
+
     this.update();
   }
 
-  up() {
-    this.y -= STEP;
+  up(step) {
+    this.y -= step;
     this.update();
-
   }
 
-  left() {
+  left(step) {
     if (this.x <= 100) {
       this.x = 100;
     } else {
-      this.x -= STEP;
+      this.x -= step;
     }
     this.update();
   }
 
-  down() {
-    this.y += STEP;
+  down(step) {
+    this.y += step;
     this.update();
 
   }
 
-  right() {
-    this.x += STEP;
+  right(step) {
+    this.x += step;
     this.update();
   }
 
   update() {
     let $pacman = $('.pacman');
-    $pacman.css("left", this.x + "px");
-    $pacman.css("top", this.y + "px");
+    $pacman.css({
+      "left": this.x + "px",
+      "top": this.y + "px",
+      "width": this.size + "px"
+    });
   }
 
 }

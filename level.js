@@ -1,6 +1,6 @@
 'use strict';
 
-const RENDER_FACTOR = 30;
+const RENDER_FACTOR = 35;
 
 class Level {
 

@@ -7,8 +7,6 @@ let schedule = (fn) => {
   }, 100);
 }
 
-const STEP = 10;
-
 let pacman = new Pacman(100, 100);
 let cat = new Cat(300, 100);
 let level = new Level();
