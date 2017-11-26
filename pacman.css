@@ -11,9 +11,7 @@ body {
 
 .cat {
 	position: fixed;
-	background-image: url("img/cat.png");
-	background-size: contain;
-	background-color: red;
+	background-color: green;
 	z-index: 1;
 }
 
