@@ -1,1 +1,1 @@
-# pacman_vs_cat is clicker.
+# pacman_vs_cat is a clone of Pac-Man
